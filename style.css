@@ -1,0 +1,8 @@
+
+html,body{margin:0;height:100%;overflow:hidden;background:#000;font-family:Arial}
+#bg{position:fixed;inset:0;background:url('capa.png') center/cover no-repeat;
+animation:zoom 18s ease-in-out infinite alternate;filter:brightness(.9)}
+#overlay{position:fixed;inset:0;background:radial-gradient(transparent,rgba(0,0,0,.45))}
+.star{position:absolute;background:#fff;border-radius:50%;animation:twinkle 2s infinite alternate}
+@keyframes twinkle{from{opacity:.2}to{opacity:1}}
+@keyframes zoom{from{transform:scale(1)}to{transform:scale(1.05)}}
