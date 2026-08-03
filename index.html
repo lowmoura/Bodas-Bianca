@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#070916" />
+  <meta name="description" content="MOONDUST — Novamente Pratinha" />
+  <title>MOONDUST — Novamente Pratinha</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <div class="aurora aurora-one" aria-hidden="true"></div>
+  <div class="aurora aurora-two" aria-hidden="true"></div>
+  <div class="mist mist-one" aria-hidden="true"></div>
+  <div class="mist mist-two" aria-hidden="true"></div>
+
+  <main class="scene" id="scene">
+    <section class="hero-card" id="heroCard" aria-label="Celebração de MOONDUST novamente no elo prata">
+      <div class="moon-wrap" aria-hidden="true">
+        <div class="moon-halo halo-one"></div>
+        <div class="moon-halo halo-two"></div>
+        <div class="moon">
+          <span class="crater crater-a"></span>
+          <span class="crater crater-b"></span>
+          <span class="crater crater-c"></span>
+          <span class="crater crater-d"></span>
+        </div>
+      </div>
+
+      <div class="rank-emblem" id="rankEmblem" aria-hidden="true">
+        <div class="emblem-glow"></div>
+        <div class="wing wing-left"><span></span><span></span><span></span></div>
+        <div class="wing wing-right"><span></span><span></span><span></span></div>
+        <div class="crest">
+          <div class="crest-outline"></div>
+          <div class="crest-inner">
+            <div class="crest-gem"></div>
+            <div class="crest-cut crest-cut-left"></div>
+            <div class="crest-cut crest-cut-right"></div>
+            <div class="crest-letter">S</div>
+          </div>
+          <div class="crest-shine"></div>
+        </div>
+      </div>
+
+      <div class="content">
+        <p class="eyebrow">A LENDA RETORNA AO SEU TRONO</p>
+        <h1>MOONDUST</h1>
+        <div class="divider" aria-hidden="true"><span></span><i></i><span></span></div>
+        <h2>NOVAMENTE <strong>PRATINHA</strong></h2>
+        <p class="subtitle">Entre luas, estrelas e partidas memoráveis,<br>o destino prateado se repete.</p>
+
+        <button class="celebrate-btn" id="celebrateBtn" type="button">
+          <span class="btn-glow"></span>
+          <span class="btn-text">ATIVAR CHUVA ESTELAR</span>
+        </button>
+
+        <p class="signature">✨ 🌙 ✨ 🌙 ✨</p>
+      </div>
+
+      <div class="orbit orbit-one" aria-hidden="true"><span></span></div>
+      <div class="orbit orbit-two" aria-hidden="true"><span></span></div>
+      <div class="orbit orbit-three" aria-hidden="true"><span></span></div>
+    </section>
+  </main>
+
+  <div class="meteor-layer" id="meteorLayer" aria-hidden="true"></div>
+  <div class="spark-burst" id="sparkBurst" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
