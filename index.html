@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8dce5">
+  <meta name="description" content="Uma pequena celebração de dois meses de uma doce coincidência.">
+  <title>Dois meses de uma doce coincidência</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <span class="float-heart heart-one">♥</span>
+    <span class="float-heart heart-two">♡</span>
+    <span class="float-heart heart-three">♥</span>
+    <span class="float-heart heart-four">♡</span>
+    <span class="sparkle sparkle-one">✦</span>
+    <span class="sparkle sparkle-two">✧</span>
+    <span class="sparkle sparkle-three">✦</span>
+    <span class="sparkle sparkle-four">✧</span>
+    <span class="sparkle sparkle-five">✦</span>
+  </div>
+
+  <main class="page-shell">
+    <header class="intro">
+      <p class="eyebrow"><span>♡</span> uma pequena comemoração <span>♡</span></p>
+      <h1>Dois meses de uma <em>doce coincidência...</em></h1>
+    </header>
+
+    <section class="dessert-section" aria-label="Sorvete decorativo interativo">
+      <div class="dessert-halo" aria-hidden="true"></div>
+      <div class="dessert-stage" id="dessertStage">
+        <canvas id="sprinkleCanvas" aria-hidden="true"></canvas>
+        <svg class="icecream-art" viewBox="0 0 440 390" role="img" aria-label="Coração de sorvete rosa decorado com chantilly, confeitos e wafer">
+          <defs>
+            <linearGradient id="pinkHeart" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ffd4e1"/>
+              <stop offset=".48" stop-color="#f39ab8"/>
+              <stop offset="1" stop-color="#d96f99"/>
+            </linearGradient>
+            <linearGradient id="cream" x1="0" y1="0" x2="0.8" y2="1">
+              <stop offset="0" stop-color="#fffdf5"/>
+              <stop offset=".65" stop-color="#fff0d9"/>
+              <stop offset="1" stop-color="#e9c9a9"/>
+            </linearGradient>
+            <linearGradient id="wafer" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f6d6a7"/>
+              <stop offset="1" stop-color="#c58b60"/>
+            </linearGradient>
+            <filter id="softShadow" x="-30%" y="-30%" width="160%" height="170%">
+              <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+              <feOffset dy="9"/>
+              <feComponentTransfer><feFuncA type="linear" slope=".20"/></feComponentTransfer>
+              <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <clipPath id="heartClip">
+              <path d="M220 324 C190 300 76 219 76 137 C76 79 119 48 166 55 C193 59 211 77 220 96 C231 75 251 58 278 54 C326 47 365 81 365 137 C365 218 251 300 220 324Z"/>
+            </clipPath>
+          </defs>
+
+          <!-- wafer sticks -->
+          <g filter="url(#softShadow)" transform="rotate(-17 305 105)">
+            <rect x="286" y="26" width="31" height="154" rx="12" fill="url(#wafer)"/>
+            <path d="M293 35 L293 169 M302 31 L302 174 M311 35 L311 169" stroke="#fff0d7" stroke-width="3" opacity=".7"/>
+            <path d="M287 60 H316 M287 91 H316 M287 122 H316" stroke="#b77c53" stroke-width="2" opacity=".5"/>
+          </g>
+          <g filter="url(#softShadow)" transform="rotate(15 125 112)">
+            <rect x="111" y="34" width="27" height="139" rx="11" fill="url(#wafer)"/>
+            <path d="M118 42 V164 M128 39 V168" stroke="#fff0d7" stroke-width="3" opacity=".75"/>
+            <path d="M112 72 H137 M112 103 H137 M112 134 H137" stroke="#b77c53" stroke-width="2" opacity=".5"/>
+          </g>
+
+          <!-- heart-shaped ice cream -->
+          <g filter="url(#softShadow)">
+            <path d="M220 324 C190 300 76 219 76 137 C76 79 119 48 166 55 C193 59 211 77 220 96 C231 75 251 58 278 54 C326 47 365 81 365 137 C365 218 251 300 220 324Z" fill="url(#pinkHeart)" stroke="#cf7897" stroke-width="4"/>
+            <g clip-path="url(#heartClip)" opacity=".34">
+              <path d="M68 112 Q160 70 220 126 T380 100" fill="none" stroke="#fff7f4" stroke-width="17"/>
+              <path d="M55 190 Q160 142 220 190 T390 164" fill="none" stroke="#b94f7b" stroke-width="10"/>
+              <path d="M85 254 Q165 205 220 246 T370 220" fill="none" stroke="#fff0e8" stroke-width="13"/>
+            </g>
+            <path d="M111 125 C120 82 159 70 187 88" fill="none" stroke="#fff4f3" stroke-width="9" stroke-linecap="round" opacity=".75"/>
+            <path d="M248 77 C286 62 329 83 339 119" fill="none" stroke="#fff4f3" stroke-width="7" stroke-linecap="round" opacity=".55"/>
+          </g>
+
+          <!-- dripping vanilla cream -->
+          <path d="M101 153 C119 130 132 145 145 153 C158 162 169 142 184 147 C199 152 200 170 215 167 C231 164 230 143 248 145 C265 147 267 164 282 158 C299 151 307 132 326 148 C338 158 342 169 344 182 C325 193 314 183 302 193 C288 205 278 197 266 190 C252 182 241 196 228 203 C212 212 198 194 184 195 C168 196 162 211 147 205 C130 199 124 186 109 193Z" fill="url(#cream)" stroke="#f4d8d2" stroke-width="3"/>
+
+          <!-- whipped cream swirl -->
+          <g filter="url(#softShadow)">
+            <path d="M177 106 C160 94 166 73 184 70 C178 51 196 39 211 50 C219 28 247 33 249 55 C269 48 282 67 269 82 C288 92 276 116 256 112 C245 130 225 122 220 110 C205 124 185 121 177 106Z" fill="url(#cream)" stroke="#e9cdb9" stroke-width="3"/>
+            <path d="M191 91 C194 75 211 73 218 84 C224 65 244 67 247 83 C258 77 265 89 256 99" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".8"/>
+          </g>
+
+          <!-- strawberry sauce -->
+          <path d="M176 117 C188 129 196 126 204 117 C212 109 219 113 222 124 C226 137 239 139 248 126" fill="none" stroke="#d75d86" stroke-width="7" stroke-linecap="round"/>
+          <path d="M270 173 C281 185 280 202 270 210 C260 218 261 232 272 240" fill="none" stroke="#c9517d" stroke-width="7" stroke-linecap="round"/>
+
+          <!-- bow -->
+          <g transform="translate(315 238) rotate(12)">
+            <path d="M0 0 C-37 -34 -61 -10 -42 15 C-30 31 -11 20 0 8 C13 25 34 34 46 15 C62 -10 36 -34 0 0Z" fill="#f8b8ca" stroke="#cf7897" stroke-width="3"/>
+            <path d="M-2 4 L-20 48 L-4 43 L8 52 L8 8Z" fill="#e994af" stroke="#cf7897" stroke-width="2"/>
+            <circle cx="1" cy="2" r="10" fill="#fff0d9" stroke="#cf7897" stroke-width="2"/>
+          </g>
+
+          <!-- decorative candy pearls -->
+          <g fill="#fff8e9" stroke="#e6b9b7" stroke-width="1.5">
+            <circle cx="137" cy="221" r="7"/><circle cx="166" cy="251" r="5"/>
+            <circle cx="205" cy="220" r="6"/><circle cx="246" cy="257" r="6"/>
+            <circle cx="291" cy="213" r="5"/><circle cx="326" cy="180" r="6"/>
+            <circle cx="111" cy="177" r="5"/><circle cx="298" cy="118" r="5"/>
+          </g>
+          <g fill="#b94f7b">
+            <path d="M150 183 l5 -8 l5 8 l-5 8Z"/><path d="M237 232 l5 -8 l5 8 l-5 8Z"/>
+            <path d="M318 151 l5 -8 l5 8 l-5 8Z"/>
+          </g>
+          <g fill="#fff7f0" opacity=".9">
+            <path d="M130 91 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4Z"/>
+            <path d="M343 230 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3Z"/>
+          </g>
+          <path d="M194 285 Q220 299 244 279" fill="none" stroke="#fff1e8" stroke-width="5" stroke-linecap="round" opacity=".65"/>
+        </svg>
+      </div>
+      <p class="tap-hint"><span>♡</span> Toque na tela para decorar o sorvete <span>♡</span></p>
+      <p class="tap-subhint">Cada toque traz uma chuva de confeitos.</p>
+    </section>
+
+    <section class="message-card">
+      <p class="message">
+        Hoje celebramos mais um pequeno capítulo dessa história que começou de maneira tão especial.
+        Que a gente continue descobrindo, aos poucos, motivos para sorrir, compartilhar momentos e construir lembranças bonitas.
+      </p>
+      <div class="ornament" aria-hidden="true"><span></span> ✧ <span></span></div>
+      <h2>Uma reflexão...</h2>
+      <blockquote>
+        “A distância diminui as paixões medíocres e aumenta as grandes, como o vento apaga as velas e atiça as fogueiras.”
+      </blockquote>
+      <div class="ornament bottom-ornament" aria-hidden="true"><span></span> ♡ <span></span></div>
+      <p class="closing">
+        Que os próximos capítulos sejam tão doces quanto este, e que a vida nos reserve boas surpresas pelo caminho.
+        <span>♡</span>
+      </p>
+    </section>
+
+    <footer>feito com carinho <span>♥</span></footer>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
